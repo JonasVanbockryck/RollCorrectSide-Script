@@ -18,12 +18,14 @@ namespace BaseMod;
 public class main : BasePlugin
 {
     public const string GUID = AUTHOR + "." + NAME;
-    public const string NAME = "TestPlugin";
+    public const string NAME = "RollCorrectSideScript";
     public const string VERSION = "0.0.1";
-    public const string AUTHOR = "Noop";
+    public const string AUTHOR = "Froggo";
 
     public override void Load()
     {
-        
+        var harmony = new Harmony(NAME);
+
+        CoinRollCorrectSide.Setup(harmony);
     }
 }
